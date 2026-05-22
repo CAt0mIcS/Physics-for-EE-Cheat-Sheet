@@ -72,23 +72,23 @@
 
 	\begin{cookbox}{Newton'sche Axiome}
 		\item Masse ist träge. Jeder Körper behält seinen Bewegungszustand bei.
-		\item $F=m  a=\frac{\diff p}{\diff t}=\dot{p}$
-		\item $F_{12}=-F_{21}$
+		\item $\vec F=m\vec a=\dot{\vec p}$
+		\item $\vec F_{12}=-\vec F_{21}$
 	\end{cookbox}
-	\textbf{Intertialsystem:} Koordinatensysteme die sich mit $v=\it const.$ zueinander bewegen.
+	\textbf{Intertialsystem:} Koordinatensysteme die sich mit $\vec v=\it const.$ zueinander bewegen.
 \end{sectionbox}
 
 \begin{sectionbox}
 	\subsection{Kraft, Energie, Impuls}
 	\subsubsection{Kraft}
 	\begin{tablebox}{ll}
-		Federkraft & $F_F=-k(\vec x - \vec x_0)$ \\ & $\vec x:$ Ort der Auslenkung, $\vec x_0$ Gleichgewichtspunkt \\
+		Federkraft & $\vec F_F=-k(\vec x - \vec x_0)$ \\ & $\vec x:$ Ort der Auslenkung, $\vec x_0$ Gleichgewichtspunkt \\
 		Gewichtskraft & $F_G=mg$ \\
 		& $F_N=mg\cos \alpha$ \\
 		& $F_H=mg\sin \alpha$ \\
-		Zentripetalkraft & $F_Z=m \frac{v^2}{r}=m\omega^2r=p\omega$ \\
+		Zentripetalkraft & $F_Z=ma_{Z}=m \frac{v^2}{r}=m\omega^2r=p\omega$ \\
 		& Zeigt in Richtung Mittelpunkt des Kreises von \\ & einem sich nicht rotierenden Beobachter \\
-		Zentrifugalkraft & $F_{flieh}=-F_Z$ \\
+		Zentrifugalkraft & $F_{\it flieh}=-F_Z$ \\
 		& Zeigt vom Mittelpunkt des Kreises weg. Der Beobachter \\ & rotiert sich hier mit ($\rightarrow$ Scheinkraft) \\
 		Reibungskraft & $F_R=\mu F_{(N)}=\mu m g   \cos \alpha$
 	\end{tablebox}
@@ -99,7 +99,7 @@
 	\end{tabular}
 
 	\subsubsection{Arbeit}
-	$W=\Delta E=F  s   \cos \alpha$
+	$W=\Delta E=\vec F \vec s=|\vec F| \, |\vec s|\cos\alpha$
 	\subsubsection{Leistung}
 	$P=
 		\underbrace{\frac{\Delta W}{\Delta t}}_{\text{mittlere Leistung}}
@@ -113,24 +113,29 @@
 		Unelastischer Stoß & $m_1v_1+m_2v_2=(m_1+m_2)u$
 	\end{tablebox}
 	\subsubsection{Raketengleichung}
-	$F=ma=\frac{\diff m}{\diff t}v_a+F_{\ir ext}$\\
-	$\vec{v}=\vec{v_0}+\vec{v_a}\ln | \frac{M_G}{m} | $\\
+	$\vec F=m\vec a=\frac{\diff m}{\diff t}\vec v_{\ir aus}+\vec F_{\ir ext}$\\
+	$\vec{v}=\vec{v_0}+\vec{v_{\ir aus}}\ln | \frac{M_G}{m} | $\\
 	$m_0=M+m_a$
 \end{sectionbox}
 
 \begin{sectionbox}
 	\subsection{Drehungen}
-	\subsubsection{Drehmoment}
-	$M=F\times r=F  r  \sin \alpha$\\
-	$M=I  \dot{\omega}=\frac{\diff L}{\diff t}$
-	\subsubsection{Trägheitsmomente}
+	$\vec v = \vec \omega \times \vec r \Leftrightarrow \vec \omega = \frac{1}{r^2}\vec r \times \vec v$ mit $\vec \omega$ als Vektor der Rotationsachse
+	\subsubsection{Drehmoment (analog zu Kraft)}
+	$\vec M=\vec r\times \vec F=|\vec F| \, |\vec r|  \sin \alpha$\\
+	$\vec M=J  \dot{\vec{\omega}}=\frac{\diff \vec L}{\diff t}$
+	\subsubsection{Trägheitsmomente (analog zu Masse)}
 	\begin{tablebox}{lll}
-		Zylindermantel & $I = mr^2$ & Drehachse ist Körperachse\\
-		Hohlzylinder & $I = \frac{1}{2}m(r_a^2+r_i^2)$ & Drehachse ist Körperachse\\
-		Massive Kugel & $I = \frac{2}{5}mr^2$  & Drehachse durch Mittelpunkt\\
+		Zylindermantel & $J = mr^2$ & Drehachse ist Körperachse\\
+		Hohlzylinder & $J = \frac{1}{2}m(r_a^2+r_i^2)$ & Drehachse ist Körperachse\\
+		Massive Kugel & $J = \frac{2}{5}mr^2$  & Drehachse durch Mittelpunkt\\
 	\end{tablebox}
-	\subsubsection{Drehimpuls}
-	$L=r\times p=I  \omega = mrv$
+	\textbf{Satz von Steiner}: Trägheitsmoment $J$ bei einer Rotation um eine bel. Achse $A$ ist die Summe des Trägheitsmoments $J_S$ der Rotation um die zu $A$ parallele Achse $S$ durch den Schwerpunkt und
+	des Trägheitsmoments $Mr^2$ der Rotation der im Schwerpunkt vereinten Gesamtmasse um $A$ \\
+	$J=J_S+Mr^2$ 
+	\subsubsection{Drehimpuls (analog zu Impuls)}
+	$\vec L=\vec r\times \vec p = m\vec r \times \vec v = J \vec \omega \qquad \qquad [L]=Js$ \\
+	Immer im Bezug auf einen bestimmten Punkt (meist Ursprung von $\vec r$)
 \end{sectionbox}
 \begin{sectionbox}
 	\subsection{Corioliskraft}
@@ -162,9 +167,10 @@
 	\begin{cookbox}{Keplersche Gesetze}
 		\item[1.] Keplersches Gesetz: Planetenbahnen sind Ellipsen um Stern in einem der beiden Brennpunkte
 		\item[2.] Keplersches Gesetz: In gleicher Zeit wird die gleiche Fläche an einer Bahn aufgespannt\\$\frac{dA}{dt} = \frac{1}{2} \vec {r} \vec {v} sin \alpha = \frac{1}{2}\vec {r} \times \vec {v} = \frac{1}{2}m|\vec {L}| \Rightarrow$ Der Drehimpuls ist zeitlich konstant
-			\item[3.] Keplersches Gesetz: $\frac{T_1^2}{T_2^2} = \frac{a_1^3}{a_2^3}$ mit T: Umlaufzeit, a: Große Halbachse
+		\item[3.] Keplersches Gesetz: $\frac{T_1^2}{T_2^2} = \frac{a_1^3}{a_2^3}$ mit T: Umlaufzeit, a: Große Halbachse
 	\end{cookbox}
 \end{sectionbox}
+
 
 % Harmonische Schwingungen
 % ----------------------------------------------------------------------
