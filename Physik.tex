@@ -127,7 +127,7 @@
 	\subsubsection{Drehmoment (analog zu Kraft)}
 	$\vec M=\vec r\times \vec F=|\vec F| \, |\vec r|  \sin \alpha$\\
 	$\vec M=J  \dot{\vec{\omega}}=\frac{\diff \vec L}{\diff t}$
-	\subsubsection{Trägheitsmomente (analog zu Masse)}
+	\subsubsection{Trägheitsmoment $I$ oder $J$ (analog zu Masse)}
 	\begin{tablebox}{lll}
 		Zylindermantel & $J = mr^2$ & Drehachse ist Körperachse\\
 		Hohlzylinder & $J = \frac{1}{2}m(r_a^2+r_i^2)$ & Drehachse ist Körperachse\\
@@ -180,9 +180,10 @@
 \section{Harmonische Schwingungen}
 \begin{sectionbox}
 	\subsection{Schwingungsgleichung}
-	$x(t)=A_0\cos(\omega t + \varphi)$ \\
-	$\dot{x}(t)=-A_0\omega\sin(\omega t + \varphi)$\\
-	$\ddot{x}(t)=-A_0\omega^2\cos(\omega t + \varphi)$
+	$x(t)=A_0\cos(\omega t + \varphi)$
+	\subsection{Gütefaktor}
+	Verhätnis mittlere Rückstellkraft / mittlere Reibungskraft \\
+	$Q=\frac{\omega_0}{2\delta}$
 \end{sectionbox}
 
 \begin{sectionbox}
@@ -190,7 +191,7 @@
 	\textbf{Bewegungsgleichung}: $\ddot{x}+\omega_0^2x=0$\\
 	$f_0=\frac{\omega_0}{2\pi} \qquad y_0=\frac{mg}{k} \qquad v_0 = \hat{x}\sqrt{\frac{k}{m}}$
 	\subsubsection{Federpendel}
-	$\omega_0^2=\frac{\text{Rücktreibende Kraft}}{\text{Einheitsmasse} \times \text{Einheitsauslenkung}}=\frac{k}{m} \rightarrow \omega = \sqrt{\frac{k}{m}}$\\
+	$\omega_0^2=\frac{\text{Rücktreibende Kraft}}{\text{Einheitsmasse} \times \text{Einheitsauslenkung}}=\frac{k}{m} \rightarrow \omega_0 = \sqrt{\frac{k}{m}}$\\
 	$A_0=v_0\sqrt{\frac{m}{k}}=\frac{v_0}{\omega_0}$\\
 	Bewegungsgleichung: $\ddot{x}+\frac{k}{m}x=0$
 	\subsubsection{Fadenpendel}
@@ -198,11 +199,11 @@
 	$\omega_0=\sqrt\frac{g}{l}$\\
 	$l=\frac{T_0^2g}{4\pi^2} \qquad h=l-l\cos \alpha$\\
 	$A_0 = v_0 \sqrt{\frac{l}{g}} \qquad E_{\ir ges} = mgl(\frac{3}{2}-\cos \alpha)$\\
-	Bewegungsgleichung: $\ddot{x}+\frac{g}{l}x=0$
-	\subsubsection{Torisionsschwingungen}
+	Bewegungsgleichung: $\ddot{\beta}+\frac{g}{l}\beta=0$
+	\subsubsection{Torisionsschwingungen (Drehpendel)}
 	$\omega_0 = \sqrt{\frac{k_t}{I}}=\sqrt{\frac{k_t}{mr^2}}$\\
 	$I=\frac{T_0^2}{4\pi^2}k_t \qquad T_0=2\pi \sqrt{\frac{I}{k_t}}$\\
-	Bewegungsgleichung: $\ddot{x}+\frac{k_t}{I}x=0$
+	Bewegungsgleichung: $\ddot{\beta}+\frac{k_t}{I}\beta=0$
 \end{sectionbox}
 \begin{sectionbox}
 	\subsection{Frei gedämpft}
@@ -211,37 +212,38 @@
 		Resonanzfrequenz & $\omega'=\sqrt{\omega_0^2-\delta^2}$ \\
 		Bewegungsgleichung & $\ddot{x}+2\delta \dot{x}+\omega_0^2x=0$
 	\end{tablebox}
-	$\delta = \frac{b}{2m}=\frac{3\pi \eta R}{m}$\\
+	$\delta = \frac{b}{2m}=\frac{3\pi \eta R}{m} \qquad \text{Reibungsterm/Abklingkoeffizient, b: Dämpfung}$\\
 
-	\subsubsection{Schwingfall}
-	$\omega_0^2>\delta^2$\\
+	\subsubsection{Schwingfall (geringe Reibung) $\omega_0^2>\delta^2$}
 	$\omega'=\sqrt{\omega_0^2-\delta^2}<\omega_0$\\
 	$x(t)=Ae^{-\delta t}\cos(\omega't)$
-	\subsubsection{Aperiodischer Grenzfall}
-	$\omega_0^2=\delta^2$\\
+
+	\subsubsection{Aperiodischer Grenzfall $\omega_0^2=\delta^2$}
 	$\omega'=0$\\
 	$x(t)=Ae^{-\delta t}  (1+\delta t)$
-	\subsubsection{Kriechfall}
-	$\omega_0^2<\delta^2$\\
+
+	\subsubsection{Kriechfall (starke Reibung) $\omega_0^2<\delta^2$}
 	$\omega'=i\delta \pm i\sqrt{\delta^2-\omega_0^2}$\\
 	$x(t)=A_1e^{-\big(\delta+\sqrt{\delta^2-\omega_0^2}\big)t}+A_2e^{-\big(\delta - \sqrt{\delta^2-\omega_0^2}\big)t}$\\
 	\includegraphics[width=.9\columnwidth]{img/Schwingungen.pdf}
 \end{sectionbox}
 \begin{sectionbox}
 	\subsection{Erzwungen gedämpft}
-	Bewegungsgleichung: $\ddot{x}+2\delta \dot{x}+\omega_0^2x=F_0e^{-i\Omega t}$\\
+	Gedämpfte Schwingung, die durch eine weitere Kraft dazu gezwungen wird, in Schwingung zu bleiben.
+	Nach der Einschwungzeit soll das System mit der Kreisfrequenz $\Omega$ schwingen. \\
+	Bewegungsgleichung: $\ddot{x}+2\delta \dot{x}+\omega_0^2x=\underbrace{F_0e^{-i\Omega t}}_{\text{externe Kraft}}$\\
 	%Resonanzfrequenz $\Omega_{\ir res}=\sqrt{\omega_0^2-2\gamma^2}$\\%
-	$\hat{x}(t)=Ae^{i(\Omega t + \varphi}$\\
-	$A(\Omega)=\frac{F_0/m}{\sqrt{(\omega_0^2-\Omega^2)^2+(\frac{b\Omega}{m})^2}}$\\
+	$\hat{x}(t)=Ae^{i(\Omega t + \varphi)}$\\
+	$A(\Omega)=\frac{F_0/m}{\sqrt{(\omega_0^2-\Omega^2)^2+(\frac{b\Omega}{m})^2}} \qquad \tan\varphi=\frac{-\Omega b/m}{w_0^2-\Omega^2}$\\
 	\begin{cookbox}{Resonanzfälle}
-		\item $\Omega < \omega_0$\\
+		\item $\Omega < \omega_0$ (Langsame Erregerfrequenz) \\
 		$A\rightarrow \frac{F_0m^{-1}}{\omega_0^2}=\frac{F_0}{k}$\qquad
 		$\Delta \varphi = 0 \qquad \Omega \rightarrow 0$
-		\item $\Omega \approx \omega_0$ (Katastrophe)\\
-		$A_{\ir max}=\frac{F_0}{b\omega_0}=\frac{F_0/m}{2\delta \sqrt{\omega_0^2-\delta^2}} \rightarrow \infty$\\
+		\item $\Omega \approx \omega_0$ (Katastrophe, Resonanz) \\
+		$A_{\ir max}=\frac{F_0}{b\omega_0}=\frac{F_0/m}{2\delta \sqrt{\omega_0^2-\delta^2}} \rightarrow \infty \text{ bei } \omega'^2=\omega_0^2-\frac{1}{2}(\frac{b}{m})^2$\\
 		$\Omega_{\ir max}=\sqrt{\omega_0^2-\frac{1}{2}(\frac{b}{m})^2}=\sqrt{\omega_0^2-2(\frac{3\pi \eta R}{m})^2}\rightarrow \omega_0$\\
 		$\Delta \varphi = \frac{\pi}{2} \qquad \delta \rightarrow 0$
-		\item $\Omega > \omega_0$\\
+		\item $\Omega > \omega_0$ (Schnelle Erregerfrequenz) \\
 		$A\rightarrow 0$\qquad
 		$\Delta \varphi = \pi \qquad \Omega \rightarrow \infty$
 	\end{cookbox}
@@ -254,9 +256,10 @@
 	\subsection{Allgemeines}
 	\textbf{Allgemeine Wellengleichung:} $\frac{1}{c^2}\frac{\partial^2u}{\partial t^2}=\Delta u$\\
 	$c=\lambda   f=\frac{\omega}{k}=\frac{x}{\Delta t}$\\
-	$\omega = 2\pi f=\frac{2\pi}{T} \qquad k=\frac{2\pi}{\lambda}=\frac{\omega}{c}$\\
+	$\omega = 2\pi f=\frac{2\pi}{T} \qquad \vec k=k\vec e_\lambda=\frac{2\pi}{\lambda}=\frac{\omega}{c}\vec e_\lambda \qquad \text{Wellenzahl}$\\
+	mit Ausbreitungsrichtung in $\vec e_\lambda$
 	\begin{emphbox}
-		\textbf{Funktion:} $y(x,t)=\hat{y}\sin(kx - \omega t + \phi)$
+		\textbf{Funktion:} $y(\vec r,t)=\hat{y}\sin(\vec k\vec r - \omega t + \phi)$
 	\end{emphbox}
 \end{sectionbox}
 \begin{sectionbox}
@@ -305,21 +308,21 @@
 \begin{sectionbox}
 	\subsection{Interferenz}
 	$f_1=f_2 \qquad A_1 = A_2 \qquad \varphi_1 \neq \varphi_2$\\
-	Konstruktiv: $\Delta \varphi = 2\pi   n$\\
+	Konstruktiv: $\Delta \varphi = 2\pi n$\\
 	Destruktiv: $\Delta \varphi = (2n+1)\pi$\\
 	\textbf{Allgemein:}
 	\begin{itemize}
-		\item Gangunterschied $\Delta s = a\sin \alpha = \frac{x}{n}\sin \alpha$
+		\item Gangunterschied $\Delta = a\sin \alpha = \frac{x}{n}\sin \alpha=\frac{\varphi}{2\pi}\lambda$
 		\item Phasendifferenz $\varphi = 2\pi \frac{\Delta}{\lambda}=2\pi a \frac{\sin \alpha}{n\lambda}$
 		\item Winkel Max: $\sin \alpha_n = \pm n   \frac{\lambda}{a}$
 		\item Winkel Min: $\sin \alpha_n = \pm (n+\frac{1}{2})  \frac{\lambda}{a}$
 	\end{itemize}
 	\subsubsection{Doppelspalt}
-	Int max: $\Delta s = \lambda n$ (Konstruktiv)\\
-	Int min: $\Delta s = (2n+1)\frac{\lambda}{2}$ (Destruktiv)\\
-	$\Delta s = a \sin \alpha' \approx a \frac{x}{d}$\\
+	Int max: $\Delta = \lambda n$ (Konstruktiv)\\
+	Int min: $\Delta = (2n+1)\frac{\lambda}{2}$ (Destruktiv)\\
+	$\Delta = a \sin \alpha' \approx a \frac{x}{d}$\\
 	Kleinwinkelnäherung: $\frac{x}{d}\approx \tan \alpha \approx \sin \alpha \approx \alpha \approx \alpha'$\\
-	$\Rightarrow \frac{\Delta s}{a} = \frac{x}{d}$
+	$\Rightarrow \frac{\Delta}{a} = \frac{x}{d}$
 	\subsubsection{Gitter}
 	Hauptmaximum: $\sin \alpha_{\ir max} = m\frac{\lambda}{d}$\\
 	Einfachspalt: $\sin \alpha_{\ir min} = \pm m \frac{\lambda}{a}$
@@ -527,6 +530,8 @@
 	\textbf{2. Gesetz von Gay Lussac} \\
 	feste Gasmenge; $V=\ir const.$\\
 	$\frac{p_1}{T_1}=\frac{p_2}{T_2}$ \\
+\end{sectionbox}
+\begin{sectionbox}
 	\textbf{Thermodynamische Systeme:}
 	\begin{tablebox}{ll}
 		\textbf{Offen} (Verbrennungsmotor) &
