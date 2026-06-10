@@ -147,8 +147,8 @@
 	\end{emphbox}
 	$\vec v$: Bewegungsrichtung, $\vec w$: (Richtung der) Rotationsachse, senkrecht zur Rotationsrichtung (auf der Erde nach Norden)\\
 	$a_c=-2(\omega \times v)=2v\omega$\\
-	$\Delta x= \frac{2}{3}\cos \beta \omega h \sqrt{\frac{2h}{g}}$\\
-	$\Delta y = -\omega^2R\cos \beta \sin \beta \frac{h}{g}$\\
+	$\Delta x= \frac{2}{3}\cos (\beta) \omega h \sqrt{\frac{2h}{g}}$\\
+	$\Delta y = -\omega^2R\cos (\beta) \sin (\beta) \frac{h}{g}$\\
 	%\includegraphics[width=0.25\columnwidth]{coriolis.pdf}
 	$R_E=\SI{6370}{\kilo \meter} \qquad r=R_E \cos \varphi \qquad \omega_E=\frac{2\pi}{86400\si{\second}}$\\
 	$F_C$: Auf der Nordhalbkugel nach rechts. Auf der Südhalbkugel nach links.
@@ -308,24 +308,29 @@
 \begin{sectionbox}
 	\subsection{Interferenz}
 	$f_1=f_2 \qquad A_1 = A_2 \qquad \varphi_1 \neq \varphi_2$\\
-	Konstruktiv: $\Delta \varphi = 2\pi n$\\
-	Destruktiv: $\Delta \varphi = (2n+1)\pi$\\
+	Konstruktiv: $\Delta \varphi = 2\pi m$\\
+	Destruktiv: $\Delta \varphi = (2m+1)\pi$\\
 	\textbf{Allgemein:}
 	\begin{itemize}
-		\item Gangunterschied $\Delta = a\sin \alpha = \frac{x}{n}\sin \alpha=\frac{\varphi}{2\pi}\lambda$
-		\item Phasendifferenz $\varphi = 2\pi \frac{\Delta}{\lambda}=2\pi a \frac{\sin \alpha}{n\lambda}$
-		\item Winkel Max: $\sin \alpha_n = \pm n   \frac{\lambda}{a}$
-		\item Winkel Min: $\sin \alpha_n = \pm (n+\frac{1}{2})  \frac{\lambda}{a}$
+		\item Gangunterschied $\Delta s = a\sin \alpha = \frac{x}{n}\sin \alpha=\frac{\varphi}{2\pi}\lambda$
+		\item Phasendifferenz $\varphi = 2\pi \frac{\Delta s}{\lambda}=2\pi a \frac{\sin \alpha}{m\lambda}$
+		\item Winkel Max: $\sin \alpha_{\ir max} = \pm m   \frac{\lambda}{a}$
+		\item Winkel Min: $\sin \alpha_{\ir min} = \pm (m+\frac{1}{2})  \frac{\lambda}{a}$
 	\end{itemize}
 	\subsubsection{Doppelspalt}
-	Int max: $\Delta = \lambda n$ (Konstruktiv)\\
-	Int min: $\Delta = (2n+1)\frac{\lambda}{2}$ (Destruktiv)\\
-	$\Delta = a \sin \alpha' \approx a \frac{x}{d}$\\
+	$a$: Spaltenabstand, $d$: Distanz zum Schirm \\
+	Int max: $\Delta s = \pm \lambda m$ (Konstruktiv)\\
+	Int min: $\Delta s = \pm (2m+1)\frac{\lambda}{2}$ (Destruktiv)\\
+	$\Delta s = a \sin \alpha' \approx a \frac{x}{d}$\\
 	Kleinwinkelnäherung: $\frac{x}{d}\approx \tan \alpha \approx \sin \alpha \approx \alpha \approx \alpha'$\\
-	$\Rightarrow \frac{\Delta}{a} = \frac{x}{d}$
+	$\Rightarrow \frac{\Delta s}{a} = \frac{x}{d}$
 	\subsubsection{Gitter}
 	Hauptmaximum: $\sin \alpha_{\ir max} = m\frac{\lambda}{d}$\\
 	Einfachspalt: $\sin \alpha_{\ir min} = \pm m \frac{\lambda}{a}$
+
+	\subsubsection{An dünner Schicht $n_2 > n_1$}
+	$\Delta s = 2d \sqrt{n_2^2-n_1^2\sin^2\alpha} + \frac{\lambda}{2}$ \\
+
 \end{sectionbox}
 \begin{sectionbox}
 	\subsection{Reflexion und Wellen in einem Medium}
@@ -409,7 +414,10 @@
 	$h_1=-\frac{f(n-1)d}{n   r_2}$ \qquad $h_2=-\frac{f(n-1)d}{n   r_1}$
 
 	\subsubsection{Linsensysteme}
+	mit $ob$: Objektiv, Linse bei $G$ und $ok$: Okular, 2. Linse
 	\begin{itemize}
+		\item \textbf{Allgemein} \\
+		      $\frac{1}{f}=\frac{1}{f_1}+\frac{1}{f_2}-\frac{d}{f_1f_2}$ mit $d$: Abstand der Linsen
 		\item \textbf{Lochkamera} \\
 		      $S=\frac{D(b+g)}{g}$
 		\item \textbf{Lupe} \\
