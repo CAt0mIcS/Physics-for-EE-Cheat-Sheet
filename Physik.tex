@@ -307,6 +307,8 @@
 \end{sectionbox}
 \begin{sectionbox}
 	\subsection{Interferenz}
+	TODO: Alle Variablen erklären \\
+
 	$f_1=f_2 \qquad A_1 = A_2 \qquad \varphi_1 \neq \varphi_2$\\
 	Konstruktiv: $\Delta \varphi = 2\pi m$\\
 	Destruktiv: $\Delta \varphi = (2m+1)\pi$\\
@@ -317,6 +319,10 @@
 		\item Winkel Max: $\sin \alpha_{\ir max} = \pm m   \frac{\lambda}{a}$
 		\item Winkel Min: $\sin \alpha_{\ir min} = \pm (m+\frac{1}{2})  \frac{\lambda}{a}$
 	\end{itemize}
+	\subsubsection{Einfachspalt/Beugung}
+	$\sin \alpha_{\ir min} = \pm m \frac{\lambda}{a}$ \\
+	TODO
+
 	\subsubsection{Doppelspalt}
 	$a$: Spaltenabstand, $d$: Distanz zum Schirm \\
 	Int max: $\Delta s = \pm \lambda m$ (Konstruktiv)\\
@@ -325,8 +331,8 @@
 	Kleinwinkelnäherung: $\frac{x}{d}\approx \tan \alpha \approx \sin \alpha \approx \alpha \approx \alpha'$\\
 	$\Rightarrow \frac{\Delta s}{a} = \frac{x}{d}$
 	\subsubsection{Gitter}
-	Hauptmaximum: $\sin \alpha_{\ir max} = m\frac{\lambda}{d}$\\
-	Einfachspalt: $\sin \alpha_{\ir min} = \pm m \frac{\lambda}{a}$
+	Hauptmaximum: $\sin \alpha_{\ir max} = \pm m\frac{\lambda}{d}$ \\
+	Nebenmaxima: $\sin \alpha_k = \pm \frac{2k+1}{2N}\frac{\lambda}{a}$ mit $N$: Menge an Schlitzen
 
 	\subsubsection{An dünner Schicht $n_2 > n_1$}
 	$\Delta s = 2d \sqrt{n_2^2-n_1^2\sin^2\alpha} + \frac{\lambda}{2}$ \\
@@ -489,9 +495,9 @@
 \begin{sectionbox}
 	\subsection{Bernoulli Gleichung}
 	\begin{emphbox}
-		$p_B=\underbrace{p}_{\text{statischer Druck}}
-			+ \underbrace{\frac{1}{2} \rho v^2}_{\text{dynamischer Druck}}
-			+ \underbrace{\rho gh}_{\text{hydrostatischer Druck}} = {\small \text{const.}}$
+		$p_B=\underbrace{p}_{\text{stat. Druck}}
+			+ \underbrace{\frac{1}{2} \rho v^2}_{\text{dyn. D.}:  E_{\ir kin}/V}
+			+ \underbrace{\rho gh}_{\text{hydrostat. D.}: E_{\ir pot}/V} = {\small \text{const.}}$
 	\end{emphbox}
 	$p_{\ir B,1}\stackrel{!}{=}p_{\ir B,2}$
 	(Energieerhaltung der Hydromechanik)
@@ -500,7 +506,7 @@
 	\subsection{Gesetz von Hagen-Poiseulle}
 	Strömung durch ein Rohr\\
 	\begin{emphbox}
-		$\dot{V}=\frac{\diff V}{\diff t}=\frac{\pi (P_1-P_2)}{8\eta   l}R^4$\\
+		$\dot{V}=\frac{\dot m}{\rho}=vA=\frac{\pi (P_1-P_2)}{8\eta   l}R^4$\\
 	\end{emphbox}
 	$v(r)=\frac{P_1-P_2}{4\eta   l}(R^2-r^2)$
 \end{sectionbox}
