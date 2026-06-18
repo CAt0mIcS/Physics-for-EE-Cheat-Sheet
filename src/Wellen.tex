@@ -1,0 +1,66 @@
+\begin{sectionbox}
+    \subsection{Allgemeines}
+    \textbf{Allgemeine Wellengleichung:} $\frac{1}{c^2}\frac{\partial^2u}{\partial t^2}=\Delta u$\\
+
+    $c=\lambda   f=\frac{\omega}{k}=\frac{x}{\Delta t}$\\
+    $k=\frac{2\pi}{\lambda}=\frac{\omega}{c} \qquad \text{Wellenzahl}$ \\
+
+    \subsubsection{Laufende Welle}
+    \begin{emphbox}
+        \textbf{Funktion:} $y(x,t)=y_{\ir max}\sin(kx \cpm \omega t + \varphi_0)^{\textcolor{red}{\text{+: Welle in neg. x}}}_{\textcolor{green}{\text{-: Welle in pos. x}}}$
+    \end{emphbox}
+
+    \subsubsection{Stehende Welle}
+    Oberschwingung: $n$, ($n=0$ für $0$-te Schwingung $\rightarrow$ ein Bauch) \\
+    Stablänge: $L=\frac{(2n+1)\lambda}{2}$ \\
+    Grundfrequenz: $f_0=\frac{c}{2L}$ \\
+    Frequenzen der Oberschwingungen: $f_n=(2n+1)f_0$
+\end{sectionbox}
+
+\begin{sectionbox}
+    \subsection{Doppler-Effekt}
+    \begin{cookbox}{}
+        \item Beobachter \textbf{bewegt}, Quelle \textbf{ruht}\\
+        \begin{itemize}
+            \item[] $f_B=f_Q(1\cpm\frac{v_B}{c})^{\textcolor{red}{\text{+: Annäherung}}}_{\textcolor{green}{\text{-: Entfernung}}}$\\
+        \end{itemize}
+        \item Beobachter \textbf{ruht}, Quelle \textbf{bewegt}\\
+        \begin{itemize}
+            \item[] $f_B=\frac{f_Q}{1\cpm v_Q/c}^{\textcolor{red}{\text{+: Entfernung}}}_{\textcolor{green}{\text{-: Annäherung}}}$\\
+        \end{itemize}
+        \item Beobachter \textbf{bewegt}, Quelle \textbf{bewegt}\\
+        $f_B = f_Q \frac{c \, \underset{\textcolor{green}{-}}{\textcolor{red}{+}} \, V_B}{c \, \underset{\textcolor{green}{+}}{\textcolor{red}{-}} \, V_Q} \qquad \text{Q} \, \underset{\textcolor{green}{\leftarrow} \textcolor{green}{\rightarrow}}{\textcolor{red}{\rightarrow} \textcolor{red}{\leftarrow}} \, \text{B}$\\
+        $f_B = f_Q \frac{c \, \underset{\textcolor{cyan}{-}}{\textcolor{purple}{+}} \, V_B}{c \, \underset{\textcolor{cyan}{-}}{\textcolor{purple}{+}} \, V_Q} \qquad \text{Q} \, \underset{\textcolor{cyan}{\rightarrow} \textcolor{cyan}{\rightarrow}}{\textcolor{purple}{\leftarrow} \textcolor{purple}{\leftarrow}} \, \text{B}$\\
+        \item Quelle \textbf{bewegt} (TODO) ($v>1 \, \ir Ma$)\\
+        $\sin \alpha=\frac{\diff w}{\diff s}=\frac{c_s t}{v_Qt}=\frac{1}{\ir Ma}$
+    \end{cookbox}
+\end{sectionbox}
+
+
+\begin{sectionbox}
+    \subsection{Interferenz}
+    \subsubsection{Einfachspalt (Beugung)}
+    $b$: Spaltbreite \\
+    Gangunterschied: $\Delta s = b\sin\alpha \approx \frac{x}{D}b$ \\
+    Maxima: $\Delta s=\pm (m + \frac{1}{2})\lambda$ \\
+    Minima: $\Delta s=\pm m\lambda \rightarrow x_{\ir min} \approx \pm\frac{m\lambda D}{b} \qquad m = (1,2,...,n)$ \\
+
+    \subsubsection{Doppelspalt}
+    $d$: Spaltenabstand, $D$: Abstand zum Schirm, $m = (0,1,...,n)$ \\
+    Gangunterschied: $\Delta s = d\sin\alpha \approx \frac{x}{D}d$ \\
+    Phasenunterschied: $\Delta\varphi = 2\pi \frac{\Delta s}{\lambda}$ \\
+    Konstr. Int. (Maxima): $\Delta s=\pm m\lambda \rightarrow x_{\ir max}\approx\pm\frac{m\lambda D}{d}$ \\
+    Destr. Int. (Minima): $\Delta s = \pm (m - \frac{1}{2})\lambda \rightarrow x_{\ir min}\approx \pm (m - \frac{1}{2})\frac{\lambda D}{d}$ \\
+
+    \subsubsection{Gitter}
+    $d$: Spaltenabstand, $D$: Abstand zum Schirm, $m = (0,1,...,n)$ \\
+    Gangunterschied: $\Delta s = d\sin\alpha \approx \frac{x}{D}d$ \\
+    Hauptmaxima: $\Delta s=\pm m\lambda \rightarrow x_{\ir max}\approx\pm\frac{m\lambda D}{d}$ \\
+    Nebenmaxima: $\Delta s = \pm \frac{2k + 1}{2N}\lambda$\\
+    Abstand benachbarter Maxima $\Delta x \approx \frac{\lambda D}{d}$ \\
+
+    \subsubsection{An dünner Schicht $n_2 > n_1$}
+    $d$: Dicke der Schicht, $\alpha$: Einfallswinkel \\
+    $\Delta s = 2d \sqrt{n_2^2-n_1^2\sin^2\alpha} + \frac{\lambda}{2}$ \\
+    Maxima und Minima wie beim Doppelspalt
+\end{sectionbox}
